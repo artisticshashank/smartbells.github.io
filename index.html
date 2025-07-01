@@ -1,85 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login - SmartBells</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .login-container {
-      background: #fff;
-      padding: 2rem 2.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-      width: 100%;
-      max-width: 350px;
-    }
-    .login-container h2 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-      color: #333;
-    }
-    .login-container label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    .login-container button {
-      width: 100%;
-      padding: 0.7rem;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .login-container button:hover {
-      background: #0056b3;
-    }
-    .login-container .signup-link {
-      display: block;
-      text-align: center;
-      margin-top: 1rem;
-      color: #007bff;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    .login-container .signup-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart School Bell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required>
+    <audio id="click-sound" src="C:/Users/SHASHANK HU/Downloads/mixkit-fast-double-click-on-mouse-275.wav" preload="auto"></audio>
+    <canvas id="particle-canvas"></canvas>
+    <header>
+        <nav>
+            <div class="logo">SmartBell</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#buy">Buy Now</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="hamburger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" />
+                    <label for="theme-switch" class="switch-label"></label>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+    <main>
+        <section class="hero">
+            <video autoplay muted loop id="hero-video">
+                <source src="https://videos.pexels.com/video-files/853875/853875-hd_1920_1080_25fps.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>The Future of School Bells is Here</h1>
+                <p>A fully customizable and app-controlled smart school bell.</p>
+                <a href="#features" class="cta-button">Learn More</a>
+            </div>
+        </section>
 
-      <button type="submit">Login</button>
-    </form>
-    <a href="#" class="signup-link">Don't have an account? Sign up</a>
-  </div>
+        <section id="about">
+            <h2>About the Developer</h2>
+            <div class="developer-card">
+                <img src="https://i.pravatar.cc/150?u=shashank" alt="Shashank">
+                <h3>Shashank</h3>
+                <p>A first-year B.Tech student in Computer Science at Malnad College of Engineering, Shashank is a passionate innovator who designed and built the Smart School Bell.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>App-Controlled</h3>
+                    <p>Manage your school bell schedule from anywhere with our intuitive mobile app.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cross-Platform</h3>
+                    <p>The app is available for both Android and iOS devices, ensuring seamless integration.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Fully Customizable</h3>
+                    <p>Create custom schedules, choose from a variety of bell sounds, and adjust the volume to your liking.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <h3>App Interface</h3>
+            <div class="gallery-grid">
+                <img src="https://placehold.co/600x400/2a2a2a/ffffff?text=App+Login" alt="App Screenshot 1">
+                <img src="https://placehold.co/600x400/2a2a2a/ffffff?text=App+Dashboard" alt="App Screenshot 2">
+                <img src="https://placehold.co/600x400/2a2a2a/ffffff?text=App+Scheduler" alt="App Screenshot 3">
+            </div>
+            <h3>Smart School Bell</h3>
+            <div class="gallery-grid">
+                <img src="https://placehold.co/600x400/2a2a2a/ffffff?text=Front+View" alt="Smart School Bell - Front View">
+                <img src="https://placehold.co/600x400/2a2a2a/ffffff?text=Side+View" alt="Smart School Bell - Side View">
+                <img src="https://placehold.co/600x400/2a2a2a/ffffff?text=Top+View" alt="Smart School Bell - Top View">
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Download the App</h2>
+            <div class="download-buttons">
+                <a href="#" class="download-btn android">Download for Android</a>
+                <a href="#" class="download-btn ios">Download for iOS</a>
+            </div>
+        </section>
+
+        <section id="buy">
+            <h2>Buy Now</h2>
+            <div class="buy-card">
+                <h3>Smart School Bell</h3>
+                <p class="price">$199</p>
+                <a href="#" class="cta-button">Buy Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartBell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+</html>
