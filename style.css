@@ -56,6 +56,14 @@ nav {
     color: white;
 }
 
+
+#devimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -241,6 +249,7 @@ section {
 
 .download-btn:hover {
     transform: scale(1.05);
+    background-color: rgba(33, 63, 215, 0.2);
 }
 
 .android {
