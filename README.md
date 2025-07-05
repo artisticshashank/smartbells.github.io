@@ -1,4 +1,12 @@
 <h1>Still  devloping......</h1>
+<a href="https://github.com/devxb/gitanimals">
+  <img
+    src="https://render.gitanimals.org/lines/srujanGowda08"
+    width="600"
+    height="120"
+  />
+</a>
+ 
 
 # 🔔 Smart Bell – A Fully Cross-Platform, Customizable Smart Doorbell App
 # You can download the anroid version here <a href="https://smartbells.github.io" target="_blank">SMART BELL</a>
